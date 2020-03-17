@@ -18,6 +18,9 @@ ax.spines['top'].set_color('none')
 ax.xaxis.set_ticks_position('bottom')
 ax.yaxis.set_ticks_position('left')
 
+plt.ylim(top=1)
+plt.ylim(bottom=-1)
+
 # plot the function
 # die Asympthote ist die Gerade y = 1.
 
