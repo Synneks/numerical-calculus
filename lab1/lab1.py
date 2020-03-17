@@ -2,9 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 100 linearly spaced numbers
-x = np.linspace(-5,5,1000)
+x = np.linspace(-100, 100, 1000)
 
-y = (x**2)/(x**2+1)
+y = (x ** 2) / (x ** 2 + 1)
 
 # setting the axes at the centre
 fig = plt.figure()
@@ -17,7 +17,10 @@ ax.xaxis.set_ticks_position('bottom')
 ax.yaxis.set_ticks_position('left')
 
 # plot the function
-plt.plot(x,y, 'r')
+# die Asympthote ist die Gerade y = 1.
+
+plt.plot(x, y, 'r')
+plt.plot(x, [1] * 1000)
 
 # show the plot
 plt.show()
