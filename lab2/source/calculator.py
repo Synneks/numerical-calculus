@@ -23,11 +23,13 @@ class Calculator:
         p = np.flip(final_pol[0].coef, axis=0)
 
         # Evaluate polynomial at X axis and plot result
-        x_axis = np.linspace(-1, 1, num=5000)
+        x_axis = np.linspace(low, high, num=5000)
         y_axis = np.polyval(p, x_axis)
 
+        x_red = np.linspace(low, high, num=5000)
+        y_red = [func(x) for x in np.linspace(low, high, num=5000)]
         plt.plot(x_axis, y_axis)
-        plt.plot(x,y)
+        plt.plot(x_red, np.array(y_red))
         plt.title(title)
         plt.show()
 
