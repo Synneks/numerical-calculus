@@ -9,23 +9,11 @@ def CS(n):
     cs = CubicSpline(x, y)
     xs = np.arange(-1, 1, 1/n)
 
-
-    
-    fig = plt.figure()
-    ax = fig.add_subplot(1, 1, 1)
-    ax.spines['left'].set_position('zero')
-    ax.spines['bottom'].set_position('zero')
-    ax.spines['right'].set_color('none')
-    ax.spines['top'].set_color('none')
-    ax.xaxis.set_ticks_position('bottom')
-    ax.yaxis.set_ticks_position('left')
-    plt.plot(x, y, 'o')
-    plt.plot(xs, 1 / (1 + ( 25 * ( xs ** 2 ) )))
     plt.plot(xs, cs(xs), label="S")
 
    
     plt.show()
 
-CS(10)
-CS(20)
+#CS(10)
+#CS(20)
 CS(30)
