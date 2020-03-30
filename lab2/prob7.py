@@ -7,7 +7,7 @@ def CS(n):
     y = 1 / (1 + ( 25 * ( x ** 2 ) ))
     print(len(x))
     cs = CubicSpline(x, y)
-    xs = np.arange(-1, 1, 1/n)
+    xs = np.linspace(-1,1,n+1)
 
     plt.plot(xs, cs(xs), label="S")
 
