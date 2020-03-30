@@ -23,8 +23,7 @@ def CS(n):
     plt.plot(xs, 1 / (1 + ( 25 * ( xs ** 2 ) )))
     plt.plot(xs, cs(xs), label="S")
 
-    plt.xlim(-0.5, 9.5)
-    plt.legend(loc='upper right', ncol=2)
+   
     plt.show()
 
 CS(10)
